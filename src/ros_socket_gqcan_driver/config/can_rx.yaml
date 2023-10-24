@@ -1,0 +1,59 @@
+# ECAN：0x171, 0x2AD
+# ACAN： 0x260, 0x26A, 0x176, 0x283, 0x2AB, 0x360, 0x162
+# 读取车辆驱动电机转矩，转速，电压，电流等信息
+- name: Rx_CAN_0x171 读取车辆驱动电机转矩，转速，电压，电流等信息
+  channel: 0
+  can_id: 0x171
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取电池SOC
+- name: Rx_CAN_0x2ad 读取电池SOC
+  channel: 0
+  can_id: 0x2ad
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取车速
+- name: Rx_CAN_0x260 读取车速
+  channel: 1
+  can_id: 0x260
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取加速度
+- name: Rx_CAN_0x26a 读取加速度
+  channel: 1
+  can_id: 0x26a
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取油门踏板开度
+- name: Rx_CAN_0x176 读取油门踏板开度
+  channel: 1
+  can_id: 0x176
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取制动踏板开度
+- name: Rx_CAN_0x283 读取制动踏板开度
+  channel: 1
+  can_id: 0x283
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取车辆档位信息
+- name: Rx_CAN_0x2ab 读取车辆档位信息
+  channel: 1
+  can_id: 0x2ab
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+# 读取车辆ready状态
+- name: Rx_CAN_0x360 读取车辆ready状态
+  channel: 1
+  can_id: 0x360
+  can_dlc: 8
+  can_data: [0,0,0,0,0,0,0,0]
+
+

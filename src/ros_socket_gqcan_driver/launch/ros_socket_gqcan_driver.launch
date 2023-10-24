@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <arg name="max_ch_num" default="2" />
+  <arg name="bitrate" default="500000" />
+  <arg name="virtual" default="false" />
+  <arg name="can_rx_setting" default="can_rx.yaml" />
+
+  <!-- <group ns="$(arg ns)"> -->
+    <node pkg="ros_socket_gqcan_driver"
+    type="ros_socket_gqcan_driver_node"
+    name="ros_socket_gqcan_driver"
+    respawn="$(arg respawn)"
+    output="screen">
+      <param name="max_ch_num" value="$(arg max_ch_num)" />
+      <param name="bitrate" value="$(arg bitrate)" />
+      <param name="virtual" value="$(arg virtual)" />
+      <param name="can_rx_setting" value="$(arg can_rx_setting)" />
+    </node>
+  <!-- </group> -->
+    <node pkg="ros_socket_gqcan_driver"
+    type="test_subscriber"
+    name="ShuChuCheLiangXinXi"
+    output="screen">
+    </node>
+</launch>
